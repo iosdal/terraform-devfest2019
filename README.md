@@ -147,3 +147,7 @@ Being only a demo, some parts are not production ready:
 - some variables passing
 - terraform deploy included in CI and remote state...
 
+## License
+
+MIT
+
