@@ -21,7 +21,7 @@ Finally the monitoring solution use both helm chart for Prometheus+Grafana.
 
 Before starting clone the entire project.
 
-This part require Terraform https://www.terraform.io/ (tested with v0.12.5) an Azure account and a service principal as described here:
+This part require Terraform https://www.terraform.io/ (tested with v0.12.5) an account on Terraform for remote state https://app.terraform.io and an Azure account and a service principal as described here:
 
 https://www.terraform.io/docs/providers/azurerm/auth/service_principal_client_secret.html
 

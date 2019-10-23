@@ -4,3 +4,5 @@ terraform/.terraform
 terraform/terraform.tfstate
 terraform/secret
 azure.auto.tfvars
+00-state.tf
+.terraformrc

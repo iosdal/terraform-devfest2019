@@ -1,5 +1,9 @@
 terraform {
-  backend "local" {
+    backend "remote" {
+    organization = "devfest"
+    workspaces {
+      name = "terraform-demo"
+    }
   }
 }
 
