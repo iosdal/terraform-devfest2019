@@ -1,26 +1,21 @@
 ## Description
  
-The project is a solution of the problem 
+The project is a simple demo for Devfest 2019
 
-https://github.com/xpeppers/cloud-phoenix-kata
+The app was a simple node.js webapp using Mongodb as backend.
 
-The app was dockerized using a Dockerfile and deployed on a AKS Azure Cluster deployed Terraform.
+ Webapp is dockerized using a Dockerfile and deployed on a AKS Azure Cluster deployed Terraform.
 
 The CI part use Travis, Github for source repository and Docker Hub for the image registry.
 
-Both the app and Mongodb are deployed on the AKS by the travis CI.
+Both the webapp and Mongodb are deployed on the AKS by the travis CI.
 
 For achieving the target I use also helm chart for Mongodb and Nginx.
 
-The scaling part is done using this
+The scaling part is done using Kubernetes Horizontal Pod Autoscale.
 
-https://github.com/Azure/azure-k8s-metrics-adapter
+Finally the monitoring solution use both helm chart for Prometheus+Grafana.
 
-implementation of the Kubernetes Custom Metrics API and External Metrics API for Azure Services plus the Horizontal Pod Autoscale.
-
-The monitoring solution use both helm chart for Prometheus+Grafana.
-
-The logging part use the Azure Insight for the log retention.
 
 ## Terraform
 
