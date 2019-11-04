@@ -11,7 +11,9 @@ spec:
   minReplicas: 2
   maxReplicas: 10
   metrics:
-  - type: Pods
-    pods:
-      metricName: rps
-      targetAverageValue: 10
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
