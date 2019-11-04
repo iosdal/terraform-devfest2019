@@ -4,7 +4,7 @@ const pki = require('node-forge').pki
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', {title: 'Express'})
+  res.render('index', {title: 'Devfest'})
 })
 
 router.get('/crash', function (req, res, next) {
