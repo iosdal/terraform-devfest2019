@@ -1,5 +1,5 @@
 # Create K8s cluster
-/*
+
 resource "azurerm_kubernetes_cluster" "k8s" {
   name                = var.cluster_name
   location            = var.location
@@ -23,4 +23,4 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     Environment = "K8s test"
   }
 }
-*/
+

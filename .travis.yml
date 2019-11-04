@@ -13,7 +13,7 @@ install:
  
  
 before_script:
-  - docker build -t ivandal77/demo .
+  - docker build -t ivandal77/demo2 .
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - docker push "$DOCKER_REPO"
 
@@ -25,9 +25,6 @@ script:
   - helm repo update
   - helm install stable/mongodb --name mongo --set persistence.enabled=true --set persistence.accessModes={ReadWriteOnce} --set persistence.size=8Gi
   - kubectl create namespace demo
-  - helm install --name sample-release azure/azure-k8s-metrics-adapter --namespace demo --set appInsights.appId="$APP_ID" --set appInsights.key="$API_KEY" --set azureAuthentication.createSecret=true
-  - kubectl create secret generic appinsightskey --from-literal=instrumentation-key="$INSTRUMENTATION_KEY" -n demo
-  - kubectl apply -f azure/custom-metric.yaml
   - kubectl apply -f azure/deployment.yaml
   - kubectl apply -f azure/service.yaml
   - kubectl apply -f azure/hpa.yaml
