@@ -4,11 +4,6 @@
  * Module dependencies.
  */
 
-const appInsights = require('applicationinsights')
-const instrumentation_key = process.env.INSTRUMENTATION_KEY
-appInsights.setup(instrumentation_key).start()
-
-
 const app = require('../app')
 const debug = require('debug')('phoenix-kata:server')
 const http = require('http')
