@@ -1,5 +1,5 @@
 # Create resource group
-
+/*
 resource "azurerm_resource_group" "demo-terraform-resource-group" {
   name     = var.terraform_resource_group
   location = var.location
@@ -9,3 +9,4 @@ resource "azurerm_resource_group" "demo-terraform-resource-group" {
     owner       = var.terraform_env_owner
   }
 }
+*/
